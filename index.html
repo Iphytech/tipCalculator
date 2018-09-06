@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tip Calculator</title>
+	<style type="text/css">
+		
+		div {
+			margin: 0;
+			padding 0;
+			color: white;
+			background: green;
+			box-sizing: 2px;
+			border: 2px red;
+			width: 350px;
+			height: 300px;
+
+		}
+		form {
+			margin: 12px;
+		}
+		button {
+			background: black;
+			margin: 20px;
+			color:white;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<form>
+		<h1>TIP CALCULATOR</h1>
+		<p>How much was the bill? </p>
+		<p>$<input type="text" name="amount" class="amount" placeholder="Bill Amount"></p>
+		<p>How was the service?</p>
+			<select class="service">
+			<option placeholder="choose an option">Good</option>
+			<option>moderate</option>
+			<option>bad</option>
+		</select>
+		<p>How amy people are sharing the bill? </p>
+		<input type="text" name="number" class="number" placeholder="number of people"><br>
+		<button name="submit" class="btn">calculate</button>
+	</form>
+</div>
+
+<script>
+
+document.querySelector('.btn').addEventListener('click', function() {
+
+var amount = document.querySelector('.amount').value;
+var service = document.querySelector('.service').value;
+var number = document.querySelector('.number').value;
+
+if(amount !== '0' && number !== '0') {
+	tip = amount/number;
+
+	alert('the service was ' + service + ' and the amount to be paid by ' + number + ' persons is $' + tip + ' from the original amount $' + amount); 
+}
+})
+</script>
+	
+</body>
+</html>
